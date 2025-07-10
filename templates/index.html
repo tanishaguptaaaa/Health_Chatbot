@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MultiLang Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Chatbot Header with Icon -->
+        <div class="chat-header">
+            <img src="{{ url_for('static', filename='image/person.png') }}" alt="Bot Avatar">
+            MindEase Bot
+        </div>
+
+        <!-- Chat Message Box -->
+        <div class="chat-box" id="chatbox"></div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Type your message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/bot.js') }}"></script>
+</body>
+</html>
